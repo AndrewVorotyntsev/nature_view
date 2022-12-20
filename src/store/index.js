@@ -9,7 +9,8 @@ export default new Vuex.Store({
       name: 'Andrew',
       role: 'ADMIN',
     },
-    favorites: [],
+    // Считываем данные о избранном из localStorage
+    favorites: JSON.parse(localStorage.getItem('favorites')),
     list: [
       {
         id: '1',
@@ -58,14 +59,28 @@ export default new Vuex.Store({
   },
   mutations: {
     addFavorite (state, payload) {
+      let localFavorites = localStorage.getItem("favorites")
+      let localArrayFavorites = JSON.parse(localFavorites)
+
+      localArrayFavorites.push(payload)
+
+      localStorage.setItem("favorites", JSON.stringify(localArrayFavorites))
+
       state.favorites.push(payload)
     },
     removeFavorite(state, payload) {
+      let localFavorites = localStorage.getItem("favorites")
+      let localArrayFavorites = JSON.parse(localFavorites)
+
       const objWithIdIndex = state.favorites.findIndex((obj) => obj === payload);
 
       if (objWithIdIndex > -1) {
         state.favorites.splice(objWithIdIndex, 1);
+
+        localArrayFavorites.splice(objWithIdIndex, 1);
       }
+
+      localStorage.setItem("favorites", JSON.stringify(localArrayFavorites))
 
     },
   },

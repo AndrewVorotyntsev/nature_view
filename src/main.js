@@ -11,5 +11,12 @@ Vue.use(ElementUI);
 new Vue({
   router,
   store,
-  render: h => h(App)
+  render: h => h(App),
+  // При запуске приложения загружем localStorage
+  mounted() {
+    // Если пользователь не сохранял избранное, сохраняем пустой массив
+    if (localStorage.getItem("favorites") == null) {
+      localStorage.setItem("favorites", JSON.stringify([]))
+    }
+  },
 }).$mount('#app')
