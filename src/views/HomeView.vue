@@ -3,9 +3,16 @@
     <div class="home">
       <GalleryComponent/>
       <div align="center">
-        <el-button type="primary" icon="el-icon-location">Леса</el-button>
-        <el-button type="primary" icon="el-icon-location">Реки</el-button>
-        <el-button type="primary" icon="el-icon-location">Горы</el-button>
+        <router-link to="/places/forest">
+          <el-button type="primary" icon="el-icon-location">Леса</el-button>
+        </router-link>
+        <router-link to="/places/river">
+          <el-button type="primary" icon="el-icon-location">Реки</el-button>
+        </router-link>
+        <router-link to="/places/mountain">
+          <el-button type="primary" icon="el-icon-location">Горы</el-button>
+        </router-link>
+
       </div>
     </div>
   </PageLayout>
