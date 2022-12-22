@@ -2,6 +2,11 @@
   <PageLayout>
     <div class="home">
       <GalleryComponent/>
+      <div align="center">
+        <el-button type="primary" icon="el-icon-location">Леса</el-button>
+        <el-button type="primary" icon="el-icon-location">Реки</el-button>
+        <el-button type="primary" icon="el-icon-location">Горы</el-button>
+      </div>
     </div>
   </PageLayout>
 </template>

@@ -1,71 +1,81 @@
 <template>
-    <div class="card">
-        <div class="card__img-container">
-            <span class="card__img">Picture</span>
+      <div class="card">
+        <div class="container">
+          <img src="@/assets/lasvegas.jpg" alt="las vegas">
         </div>
-        <div class="card__content">
-            <div class="card__content__title-wrapper">
-                <span class="card__content__title">Title</span>
-            </div>
-            <div class="card__content__subtitle-wrapper" >
-                <span  class="card__content__subtitle card__content__subtitle--red">Subtitle</span>
-            </div>
+        <div class="details">
+          <h3> {{ title }}</h3>
+          <p> {{ description }} </p>
         </div>
-    </div>
+        <div v-if="isFavorite" class="bottom clearfix">
+          <el-button type="text" class="button" @click="add(id)">Добавить в избранное</el-button>
+        </div>
+        <div v-else class="bottom clearfix">
+          <el-button type="text" class="button"  @click="remove(id)" >Удалить из избранного</el-button>
+        </div>
+      </div>
 </template>
 
 <script>
+import {mapActions} from "vuex";
+
 export default {
-    name: 'CardComp'
+  name: 'CardComp',
+  props: {
+    id: String,
+    title: String,
+    description: String,
+    isFavorite: Boolean,
+    image: {
+      type: String,
+      default: "@/assets/lasvegas.jpg"
+    },
+  },
+  methods: {
+    ...mapActions([
+      'addFavorite',
+      'removeFavorite'
+    ]),
+    add (id) {
+      this.addFavorite(id)
+    },
+    remove (id) {
+      this.removeFavorite(id)
+    },
+  }
 }
 </script>
 
-<style lang="less">
-@cred: green;
+<style>
+  .card{
+    background-color: #1c1b29;
+    border-radius: 20px;
+    width: 800px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.18);
+  }
 
-@borderSize: 4px;
+  img{
+    width: 100%;
+    display: block;
+    border-radius: 20px 20px 0 0;
+  }
 
-.card {
-    width: 200px;
-    border-radius: 10px;
-    border: 1px solid gray;
-    overflow: hidden;
+  .details{
+    padding: 20px 10px;
+  }
 
-    &__img {
-        width: 100%;
+  .details>h3{
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 10px 0 15px 0;
+  }
 
-        &-container {
-            width: 100%;
-            overflow: hidden;
-            background-color: brown;
-        }
-    }
+  .details>p{
+    color: #a0a0a0;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 400;
+  }
 
-    &__content {
-        padding: 10px;
-
-        &__title {
-            font-size: 20px;
-
-            &-wrapper {
-                padding: @borderSize*1.5 @borderSize;
-            }
-        }
-
-        &__subtitle {
-            font-size: 14px;
-
-            &-wrapper {
-                padding: @borderSize;
-            }
-
-            &--red {
-                color: red;
-                &:hover {
-                    color: @cred;
-                }
-            }
-        }
-    }
-}
 </style>
