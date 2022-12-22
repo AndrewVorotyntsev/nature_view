@@ -1,9 +1,13 @@
 <template>
   <div class="block">
-    <el-carousel height="400px">
-      <el-carousel-item v-for="item in 4" :key="item">
-<!--  TODO: картинка      -->
-        <h3 class="small" align="center">{{ item }}</h3>
+    <el-carousel height="600px">
+      <el-carousel-item v-for="item in 2" :key="item" align="center">
+        <div v-if="item === 1" >
+          <img src=@/assets/lasvegas.jpg height="600px"  alt=""/>
+        </div>
+        <div v-if="item === 2" >
+          <img src=@/assets/mountains1.jpg height="600px" alt=""/>
+        </div>
       </el-carousel-item>
     </el-carousel>
   </div>
@@ -11,7 +15,7 @@
 
 <script>
 export default {
-  name: "GalleryComponent"
+  name: "GalleryComponent",
 }
 </script>
 
