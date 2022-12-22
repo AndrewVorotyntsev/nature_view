@@ -1,7 +1,7 @@
 <template>
       <div class="card">
         <div class="container">
-          <img src="@/assets/lasvegas.jpg" alt="las vegas">
+          <img :src="itemImage" alt="las vegas">
         </div>
         <div class="details">
           <h3> {{ title }}</h3>
@@ -26,10 +26,19 @@ export default {
     title: String,
     description: String,
     isFavorite: Boolean,
-    image: {
+    imageSrc: {
       type: String,
-      default: "@/assets/lasvegas.jpg"
+      default: "lasvegas.jpg"
     },
+  },
+  computed: {
+    itemImage() {
+      if (!this.imageSrc) {
+        return
+      }
+      const fileName = this.imageSrc.toLowerCase();
+      return require(`@/assets/${fileName}`);
+    }
   },
   methods: {
     ...mapActions([

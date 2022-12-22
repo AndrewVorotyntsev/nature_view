@@ -16,6 +16,7 @@ export default new Vuex.Store({
         id: '1',
         title: 'Горы',
         description: "Описание гор",
+        image: "mountains1.jpg",
         category: 'mountain'
       },
       {
