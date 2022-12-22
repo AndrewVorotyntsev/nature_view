@@ -3,10 +3,10 @@
     <el-carousel height="600px">
       <el-carousel-item v-for="item in 2" :key="item" align="center">
         <div v-if="item === 1" >
-          <img src=@/assets/lasvegas.jpg height="600px"  alt=""/>
+          <img src=@/assets/lasvegas.jpg class="gallery-image"  alt=""/>
         </div>
         <div v-if="item === 2" >
-          <img src=@/assets/mountains1.jpg height="600px" alt=""/>
+          <img src=@/assets/mountains1.jpg class="gallery-image" alt=""/>
         </div>
       </el-carousel-item>
     </el-carousel>
@@ -34,5 +34,10 @@ export default {
 
   .el-carousel__item:nth-child(2n+1) {
     background-color: #d3dce6;
+  }
+
+  .gallery-image{
+    height: 600px;
+    width: 800px;
   }
 </style>

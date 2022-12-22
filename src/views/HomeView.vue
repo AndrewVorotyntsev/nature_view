@@ -2,14 +2,14 @@
   <PageLayout>
     <div class="home">
       <GalleryComponent/>
-      <div align="center">
-        <router-link to="/places/forest">
+      <div align="center" class="navigation-links">
+        <router-link class="navigation-link" to="/places/forest">
           <el-button type="primary" icon="el-icon-location">Леса</el-button>
         </router-link>
-        <router-link to="/places/river">
+        <router-link class="navigation-link" to="/places/river">
           <el-button type="primary" icon="el-icon-location">Реки</el-button>
         </router-link>
-        <router-link to="/places/mountain">
+        <router-link class="navigation-link" to="/places/mountain">
           <el-button type="primary" icon="el-icon-location">Горы</el-button>
         </router-link>
 
@@ -31,3 +31,12 @@ export default {
   }
 }
 </script>
+
+<style>
+.navigation-links {
+  padding: 24px;
+}
+.navigation-link {
+  padding: 4px;
+}
+</style>
