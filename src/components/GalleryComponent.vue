@@ -1,12 +1,15 @@
 <template>
   <div class="block">
-    <el-carousel height="600px">
-      <el-carousel-item v-for="item in 2" :key="item" align="center">
+    <el-carousel height="400px">
+      <el-carousel-item v-for="item in 3" :key="item" align="center">
         <div v-if="item === 1" >
-          <img src=@/assets/lasvegas.jpg class="gallery-image"  alt=""/>
+          <img src=@/assets/mountains1.jpg class="gallery-image"  alt=""/>
         </div>
         <div v-if="item === 2" >
-          <img src=@/assets/mountains1.jpg class="gallery-image" alt=""/>
+          <img src=@/assets/river1.jpg class="gallery-image" alt=""/>
+        </div>
+        <div v-if="item === 3" >
+          <img src=@/assets/forest1.jpg class="gallery-image" alt=""/>
         </div>
       </el-carousel-item>
     </el-carousel>
@@ -37,7 +40,7 @@ export default {
   }
 
   .gallery-image{
-    height: 600px;
-    width: 800px;
+    height: 400px;
+    width: auto;
   }
 </style>

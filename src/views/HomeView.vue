@@ -1,7 +1,11 @@
 <template>
   <PageLayout>
     <div class="home">
+      <h1 class="heading">Nature View</h1>
       <GalleryComponent/>
+      <div class="description">
+        Начните свое путешествие прямо сейчас:
+      </div>
       <div align="center" class="navigation-links">
         <router-link class="navigation-link" to="/places/forest">
           <el-button type="primary" icon="el-icon-location">Леса</el-button>
@@ -32,10 +36,29 @@ export default {
 </script>
 
 <style>
+
+@font-face {
+  font-family: "AubreyPro";
+  src: url('@/assets/fonts/AubreyPro.otf');
+}
+
+.heading {
+  font-size: 50px;
+  text-align: center;
+  font-family: AubreyPro,serif;
+}
+
 .navigation-links {
   padding: 24px;
 }
 .navigation-link {
   padding: 4px;
+}
+
+.description {
+  font-size: 24px;
+  text-align: center;
+  padding-top: 16px;
+  font-family: AubreyPro,serif;
 }
 </style>

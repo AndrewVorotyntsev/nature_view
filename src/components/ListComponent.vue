@@ -1,18 +1,6 @@
 <template>
   <div class="list">
-    <h2>{{ name }}</h2>
-<!--    <el-card v-for="(item, index) in list" :key="index" :body-style="{ padding: '0px', width: '200px' }">-->
-<!--      <img :src="item.img" class="image">-->
-<!--      <div>-->
-<!--        <span>{{ item.title }}<span v-if="isBasket"> - ({{ item.price }})</span></span>-->
-<!--        <div v-if="favorites.findIndex(((obj) => obj === item.id)) === -1" class="bottom clearfix">-->
-<!--          <el-button type="text" class="button" @click="add(item.id)">Добавить в избранное</el-button>-->
-<!--        </div>-->
-<!--        <div v-else class="bottom clearfix">-->
-<!--          <el-button type="text" class="button" @click="remove(item.id)">Удалить из избранного</el-button>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </el-card>-->
+    <h2 class="heading" >{{ name }}</h2>
     <div align="center">
       <div v-for="(item, index) in list" :key="index" align="center">
         <CardComp :id="item.id" :image-src="item.image" :title="item.title" :description="item.description" :is-favorite="favorites.findIndex(((obj) => obj === item.id)) === -1" />
@@ -49,4 +37,16 @@ export default {
 </script>
 
 <style scoped>
+
+@font-face {
+  font-family: "AubreyPro";
+  src: url('@/assets/fonts/AubreyPro.otf');
+}
+
+.heading {
+  font-size: 42px;
+  text-align: center;
+  font-family: AubreyPro,serif;
+}
+
 </style>

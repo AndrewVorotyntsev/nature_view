@@ -1,8 +1,7 @@
 <template>
   <PageLayout>
     <div class="favorite">
-      <h1>This is an favorite page</h1>
-      <ListComponent name="Корзина" :list="listBasket" :favorites="listFavorites" :is-basket="true" />
+      <ListComponent name="Избранное" :list="listBasket" :favorites="listFavorites" :is-basket="true" />
     </div>
   </PageLayout>
 </template>

@@ -1,7 +1,7 @@
 <template>
   <PageLayout>
     <div class="places">
-      <h1>This is an places page</h1>
+      <h1 class="heading">Красивые места</h1>
       <ListComponent :name="titleCategory" :list="listCategory" :favorites="listFavorites"/>
     </div>
   </PageLayout>
@@ -51,5 +51,17 @@ export default {
 </script>
 
 <style scoped>
+
+@font-face {
+  font-family: "AubreyPro";
+  src: url('@/assets/fonts/AubreyPro.otf');
+}
+
+.heading {
+  font-size: 50px;
+  text-align: center;
+  font-family: AubreyPro,serif;
+}
+
 
 </style>
