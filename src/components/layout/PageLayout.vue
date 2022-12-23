@@ -2,7 +2,10 @@
     <div class="page-layout">
         <header>
             <slot name="header">
-                <el-menu class="el-menu-demo" mode="horizontal" :router="true" >
+                <el-menu class="el-menu-demo" mode="horizontal" :router="true"
+                         background-color="#adacf5"
+                         text-color="#fff"
+                         active-text-color="#6000ff">
                     <el-menu-item index="1" :route="{ name: 'home' }">Home</el-menu-item>
                     <el-submenu index="2">
                         <template slot="title">Places</template>
@@ -35,5 +38,9 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style>
+
+.menu {
+  color: #6000ff;
+}
 </style>
