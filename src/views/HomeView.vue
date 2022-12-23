@@ -12,7 +12,6 @@
         <router-link class="navigation-link" to="/places/mountain">
           <el-button type="primary" icon="el-icon-location">Горы</el-button>
         </router-link>
-
       </div>
     </div>
   </PageLayout>

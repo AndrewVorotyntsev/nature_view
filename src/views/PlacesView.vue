@@ -25,8 +25,8 @@ export default {
       return this.getListFavorites
     },
     titleCategory () {
-      const name = this.$route.params.name
-      switch (name) {
+      const category = this.$route.params.category
+      switch (category) {
         case 'mountain': {
           return 'Горы'
         }
@@ -42,7 +42,7 @@ export default {
       }
     },
     listCategory () {
-      return this.getListByCategory(this.$route.params.name)
+      return this.getListByCategory(this.$route.params.category)
     },
   },
   mounted () {

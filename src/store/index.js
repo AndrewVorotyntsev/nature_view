@@ -14,39 +14,44 @@ export default new Vuex.Store({
     list: [
       {
         id: '1',
-        title: 'Горы',
-        description: "Описание гор",
+        title: 'Горное озеро',
+        description: "Озеро посреди величественных гор",
         image: "mountains1.jpg",
         category: 'mountain'
       },
       {
         id: '2',
-        title: 'Горы 2',
-        description: "Описание гор 2",
+        title: 'Исландский пейзаж',
+        description: "Необычные горы в Исландии",
+        image: "mountains2.jpg",
         category: 'mountain'
       },
       {
         id: '3',
-        title: 'Горы 3',
-        description: "Описание гор 3",
+        title: 'Снежные вершины',
+        description: "Экстремальное покорение снежных вершин",
+        image: "mountains3.jpg",
         category: 'mountain'
       },
       {
         id: '4',
-        title: 'Лес 1',
-        description: "Описание леса 1",
+        title: 'Зеленый лес',
+        description: "Тропа здоровья среди леса, гуляя по которой можно дышать свежим воздухом",
+        image: "forest1.jpg",
         category: 'forest'
       },
       {
         id: '5',
-        title: 'Лес 2',
-        description: "Описание леса 2",
+        title: 'Утренний лес',
+        description: "Прогулка по живописному лесу рано утром",
+        image: "forest2.jpg",
         category: 'forest'
       },
       {
         id: '6',
-        title: 'Река 1',
-        description: "Описание реки 1",
+        title: 'Широкая река',
+        description: "Большая горная река, по которой можно плавать на лодке",
+        image: "river1.jpg",
         category: 'river'
       },
     ]

@@ -16,15 +16,10 @@ const routes = [
     component: () => import('../views/AboutView.vue')
   },
   {
-    path: '/places/:name',
+    path: '/places/:category',
     name: 'places',
     component: () => import('../views/PlacesView.vue')
   },
-  // {
-  //   path: '/places/:placeId',
-  //   name: 'details',
-  //   component: () => import('../views/PlaceDetailsView.vue')
-  // },
   {
     path: '/favorites',
     name: 'favorites',
