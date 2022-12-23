@@ -73,6 +73,7 @@ export default {
     background-color: #1c1b29;
     border-radius: 20px;
     width: 800px;
+    margin: 12px;
     box-shadow: 0 0 30px rgba(0,0,0,0.18);
   }
 
