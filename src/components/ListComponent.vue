@@ -3,7 +3,13 @@
     <h2 class="heading" >{{ name }}</h2>
     <div align="center">
       <div v-for="(item, index) in list" :key="index" align="center">
-        <CardComp :id="item.id" :image-src="item.image" :title="item.title" :description="item.description" :is-favorite="favorites.findIndex(((obj) => obj === item.id)) === -1" />
+        <CardComp
+            :id="item.id"
+            :image-src="item.image"
+            :title="item.title"
+            :description="item.description"
+            :coordinates="item.coordinates"
+            :is-favorite="favorites.findIndex(((obj) => obj === item.id)) === -1" />
       </div>
     </div>
   </div>

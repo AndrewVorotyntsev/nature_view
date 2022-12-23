@@ -17,6 +17,7 @@ export default new Vuex.Store({
         title: 'Горное озеро',
         description: "Озеро посреди величественных гор",
         image: "mountains1.jpg",
+        coordinates: "40,60,12z",
         category: 'mountain'
       },
       {
@@ -24,6 +25,7 @@ export default new Vuex.Store({
         title: 'Исландский пейзаж',
         description: "Необычные горы в Исландии",
         image: "mountains2.jpg",
+        coordinates: "63.4477043,-18.8639329,12z",
         category: 'mountain'
       },
       {
@@ -31,6 +33,7 @@ export default new Vuex.Store({
         title: 'Снежные вершины',
         description: "Экстремальное покорение снежных вершин",
         image: "mountains3.jpg",
+        coordinates: "73.5259752,56.319744,12z",
         category: 'mountain'
       },
       {
@@ -38,6 +41,7 @@ export default new Vuex.Store({
         title: 'Зеленый лес',
         description: "Тропа здоровья среди леса, гуляя по которой можно дышать свежим воздухом",
         image: "forest1.jpg",
+        coordinates: "51.6995033,39.0529833,12z",
         category: 'forest'
       },
       {
@@ -45,6 +49,7 @@ export default new Vuex.Store({
         title: 'Утренний лес',
         description: "Прогулка по живописному лесу рано утром",
         image: "forest2.jpg",
+        coordinates: "51.6995033,39.0529833,12z",
         category: 'forest'
       },
       {
@@ -52,6 +57,7 @@ export default new Vuex.Store({
         title: 'Широкая река',
         description: "Большая горная река, по которой можно плавать на лодке",
         image: "river1.jpg",
+        coordinates: "51.6995033,39.0529833,12z",
         category: 'river'
       },
     ]

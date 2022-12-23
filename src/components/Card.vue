@@ -7,6 +7,11 @@
           <h3> {{ title }}</h3>
           <p> {{ description }} </p>
         </div>
+          <a id="myLink" :href=placeCoordinates target="_blank">
+            <el-button type="text" class="button">
+              Открыть на карте
+            </el-button>
+          </a>
         <div v-if="isFavorite" class="bottom clearfix">
           <el-button type="text" class="button" @click="add(id)">Добавить в избранное</el-button>
         </div>
@@ -26,6 +31,7 @@ export default {
     title: String,
     description: String,
     isFavorite: Boolean,
+    coordinates: String,
     imageSrc: {
       type: String,
       default: "lasvegas.jpg"
@@ -38,6 +44,13 @@ export default {
       }
       const fileName = this.imageSrc.toLowerCase();
       return require(`@/assets/${fileName}`);
+    },
+    placeCoordinates() {
+      if (!this.coordinates) {
+        return
+      }
+      const place = this.coordinates.toLowerCase();
+      return `https://google.com/maps/@${place}`;
     }
   },
   methods: {
