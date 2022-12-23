@@ -6,18 +6,20 @@
         <div class="details">
           <h3> {{ title }}</h3>
           <p> {{ description }} </p>
-        </div>
           <a id="myLink" :href=placeCoordinates target="_blank">
             <el-button type="text" class="button">
               Открыть на карте
             </el-button>
           </a>
-        <div v-if="isFavorite" class="bottom clearfix">
-          <el-button type="text" class="button" @click="add(id)">Добавить в избранное</el-button>
+          <div v-if="isFavorite" class="bottom clearfix">
+            <el-button type="text" class="button" @click="add(id)">Добавить в избранное</el-button>
+          </div>
+          <div v-else class="bottom clearfix">
+            <el-button type="text" class="button"  @click="remove(id)" >Удалить из избранного</el-button>
+          </div>
         </div>
-        <div v-else class="bottom clearfix">
-          <el-button type="text" class="button"  @click="remove(id)" >Удалить из избранного</el-button>
-        </div>
+
+
       </div>
 </template>
 
@@ -84,7 +86,7 @@ export default {
   }
 
   .details{
-    padding: 20px 10px;
+    padding: 10px 5px;
   }
 
   .details>h3{
