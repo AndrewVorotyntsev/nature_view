@@ -6,7 +6,7 @@
         <div class="details">
           <h3> {{ title }}</h3>
           <p> {{ description }} </p>
-          <a id="myLink" :href=placeCoordinates target="_blank">
+          <a id="placeLink" :href=placeCoordinates target="_blank">
             <el-button type="text" class="button">
               Открыть на карте
             </el-button>

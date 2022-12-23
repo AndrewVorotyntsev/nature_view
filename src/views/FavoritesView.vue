@@ -30,8 +30,6 @@ export default {
       return this.getListFavorites
     },
   },
-  mounted () {
-  }
 }
 </script>
 
