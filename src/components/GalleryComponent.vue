@@ -34,5 +34,6 @@ export default {
   .gallery-image{
     height: 400px;
     width: auto;
+    border-radius: 5px;
   }
 </style>
